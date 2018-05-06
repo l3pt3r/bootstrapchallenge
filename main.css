@@ -40,7 +40,7 @@
 }
 
 @media screen and (max-width: 531px) {
-  .pagesection { display: flex; flex-flow: column-reverse; }
+  .pagesection { display: flex; flex-flow: row; }
 }
 
 
