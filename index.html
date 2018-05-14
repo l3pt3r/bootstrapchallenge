@@ -321,7 +321,14 @@
 
     <script>
         var slideIndex = 1;
-        showSlides(slideIndex);
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("carousel-indicator");
+      
+        setInterval(function () {
+            showSlides(slideIndex);
+            slideIndex++;
+        }, 3000);
 
         // Next/previous controls
         function plusSlides(n) {
@@ -334,9 +341,6 @@
         }
 
         function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("carousel-indicator");
             if (n > slides.length) { slideIndex = 1 }
             if (n < 1) { slideIndex = slides.length }
             for (i = 0; i < slides.length; i++) {
